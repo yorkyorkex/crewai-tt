@@ -1,5 +1,21 @@
 # AiLatestDevelopment Crew
 
+conda create -n crewai-tutorial -y
+
+conda activate crewai-tutorial
+
+pip install crewai 'crewai[tools]'
+
+crewai create crew ai-latest-development
+
+cd ai_latest_development
+
+python .\src\ai_latest_development\main.py
+
+ollama pull llama3.2:1b
+
+python .\src\ai_latest_development\main.py
+
 Welcome to the AiLatestDevelopment Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
 ## Installation
@@ -15,9 +31,11 @@ pip install uv
 Next, navigate to your project directory and install the dependencies:
 
 (Optional) Lock the dependencies and install them by using the CLI command:
+
 ```bash
 crewai install
 ```
+
 ### Customizing
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
@@ -46,6 +64,7 @@ The ai-latest-development Crew is composed of multiple AI agents, each with uniq
 ## Support
 
 For support, questions, or feedback regarding the AiLatestDevelopment Crew or crewAI.
+
 - Visit our [documentation](https://docs.crewai.com)
 - Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
 - [Join our Discord](https://discord.com/invite/X4JWnZnxPb)

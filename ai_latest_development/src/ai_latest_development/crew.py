@@ -1,4 +1,4 @@
-from crewai import Agent, Crew, Process, Task
+from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
 
@@ -17,6 +17,7 @@ class AiLatestDevelopment():
 
     agents: List[BaseAgent]
     tasks: List[Task]
+    ollama_llm: LLM(model="ollama/llama3.2:1b", base_url="http://localhost:11434") # type: ignore[call-arg]
 
     # Learn more about YAML configuration files here:
     # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
@@ -28,14 +29,16 @@ class AiLatestDevelopment():
     def researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['researcher'], # type: ignore[index]
-            verbose=True
+            verbose=True,
+            llm=self.ollama_llm
         )
 
     @agent
     def reporting_analyst(self) -> Agent:
         return Agent(
             config=self.agents_config['reporting_analyst'], # type: ignore[index]
-            verbose=True
+            verbose=True,
+            llm=self.ollama_llm
         )
 
     # To learn more about structured task outputs,
