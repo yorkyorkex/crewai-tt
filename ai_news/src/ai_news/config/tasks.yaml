@@ -27,5 +27,4 @@ ai_news_write_task:
     - Conclusion
     Do not include code blocks or triple backticks.
   agent: ai_news_writer
-
 # file_write_task removed - ai_news_write_task now outputs directly to file
