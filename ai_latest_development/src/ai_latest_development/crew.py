@@ -17,7 +17,10 @@ class AiLatestDevelopment():
 
     agents: List[BaseAgent]
     tasks: List[Task]
-    ollama_llm: LLM(model="ollama/llama3.2:1b", base_url="http://localhost:11434") # type: ignore[call-arg]
+    
+    def __init__(self):
+        super().__init__()
+        self.ollama_llm = LLM(model="ollama/llama3.2:1b", base_url="http://localhost:11434")
 
     # Learn more about YAML configuration files here:
     # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
