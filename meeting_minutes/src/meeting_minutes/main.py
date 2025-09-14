@@ -8,7 +8,7 @@ from pathlib import Path
 
 from crews.meeting_minutes__crew.meeting_minutes__crew import MeetingMinutesCrew
 from crews.gmailcrew.gmailcrew import GmailCrew
-#import agentops
+import agentops
 import os
 from dotenv import load_dotenv
 
@@ -78,13 +78,13 @@ class MeetingMinutesFlow(Flow[MeetingMinutesState]):
         print(f"Draft Crew: {draft_crew}")
 
 def kickoff():
-    #session = agentops.init(api_key=os.getenv("AGENTOPS_API_KEY"))
+    session = agentops.init(api_key=os.getenv("AGENTOPS_API_KEY"))
 
     meeting_minutes_flow = MeetingMinutesFlow()
     meeting_minutes_flow.plot()
     meeting_minutes_flow.kickoff()
 
-    #session.end_session()
+    session.end_session()
 
 if __name__ == "__main__":
     kickoff()

@@ -1,6 +1,6 @@
-- Expand the high-yield savings product line and RoboAdvisor platform.
-- Continue diversification of the asset-backed securities portfolio, including investments in collateralized debt obligations and residential mortgage-backed securities.
-- Invest further in AAA-rated corporate bonds to enhance risk-adjusted returns.
-- Maintain and improve the cost efficiencies in the scalable business model.
-- Manage risk with a value-at-risk model set at a 99% confidence level.
-- Utilize the upcoming IPO of Pay Plus to bolster liquidity and support growth strategies.
+- Expand high-yield savings product line
+- Continue diversification of asset-backed securities portfolio
+- Invest in AAA-rated corporate bonds
+- Monitor and manage leverage with a conservative approach
+- Prepare for the IPO of FinTech subsidiary, Pay Plus
+- Utilize AI-driven predictive analytics for growth strategies
