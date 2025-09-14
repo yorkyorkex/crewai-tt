@@ -3,6 +3,7 @@
 pip install pydub
 pip install google-auth google-auth-oauthlib google-api-python-client
 pip install markdown
+pip install agentops
 
 Welcome to the {{crew_name}} Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
