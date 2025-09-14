@@ -76,6 +76,7 @@ class AiNews():
 	def file_write_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['file_write_task'], # type: ignore[index]
+			output_file='news/{date}_news_article.md'
 		)
 
 	@crew

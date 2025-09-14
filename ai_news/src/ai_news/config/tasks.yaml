@@ -16,15 +16,23 @@ website_scrape_task:
 
 ai_news_write_task:
   description: >
-    Summarize the information from the websites into a fully fledge news article in markdown format.
+    Create a professional news article about {topic} based on the research data provided.
+    Write a comprehensive news article in markdown format covering the latest developments and trends.
+    Focus on factual information, recent updates, and industry insights.
   expected_output: >
-    A fully fledge news article with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
+    A complete news article in markdown format with:
+    - Clear headline
+    - Introduction paragraph
+    - Main content sections with relevant information
+    - Conclusion
+    Do not include code blocks or triple backticks.
   agent: ai_news_writer
 
 file_write_task:
   description: >
-    Write the news article to a file
+    Save the completed news article to a markdown file in the news directory.
+    Create a file with the current date and ensure all content from the previous task is preserved.
   expected_output: >
-    A fully fledge news article with all information from previous task into a file named news/{date}_news_article.md
+    Successfully created file: news/{date}_news_article.md
+    The file contains the complete news article content from the previous task.
   agent: file_writer
