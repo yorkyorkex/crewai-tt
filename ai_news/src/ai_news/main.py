@@ -35,9 +35,30 @@ try:
             'current_year': str(current_date.year),
             'date': current_date.strftime('%Y-%m-%d')
         }
+
+
+        inputs_array =[
+            {
+                'topic': 'AI LLMs',
+                'current_year': str(current_date.year),
+                'date': f"{current_date.strftime('%Y-%m-%d')}_ai_llms"
+            },
+            {
+                'topic': 'AI in Healthcare',
+                'current_year': str(current_date.year),
+                'date': f"{current_date.strftime('%Y-%m-%d')}_ai_healthcare"
+            },
+            {
+                'topic': 'Blockchain Technology',
+                'current_year': str(current_date.year),
+                'date': f"{current_date.strftime('%Y-%m-%d')}_blockchain"
+            }
+        ]
+
+
         
         try:
-            AiNews().crew().kickoff(inputs=inputs)
+            AiNews().crew().kickoff_for_each(inputs=inputs_array)
         except Exception as e:
             raise Exception(f"An error occurred while running the crew: {e}")
 

@@ -28,11 +28,4 @@ ai_news_write_task:
     Do not include code blocks or triple backticks.
   agent: ai_news_writer
 
-file_write_task:
-  description: >
-    Save the completed news article to a markdown file in the news directory.
-    Create a file with the current date and ensure all content from the previous task is preserved.
-  expected_output: >
-    Successfully created file: news/{date}_news_article.md
-    The file contains the complete news article content from the previous task.
-  agent: file_writer
+# file_write_task removed - ai_news_write_task now outputs directly to file

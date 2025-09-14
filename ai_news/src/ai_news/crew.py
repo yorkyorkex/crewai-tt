@@ -45,14 +45,7 @@ class AiNews():
 			llm=self.ollama_llm
 		)
 	
-	@agent
-	def file_writer(self) -> Agent:
-		return Agent(
-			config=self.agents_config['file_writer'], # type: ignore[index]
-			tools=[FileWriterTool()],
-			verbose=True,
-			llm=self.ollama_llm
-		)
+	# file_writer agent 移除，由 ai_news_write_task 直接輸出文件
 
 	@task
 	def retrieve_news_task(self) -> Task:
@@ -70,14 +63,10 @@ class AiNews():
 	def ai_news_write_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['ai_news_write_task'], # type: ignore[index]
-		)
-	
-	@task
-	def file_write_task(self) -> Task:
-		return Task(
-			config=self.tasks_config['file_write_task'], # type: ignore[index]
 			output_file='news/{date}_news_article.md'
 		)
+	
+	# file_write_task 移除，由 ai_news_write_task 直接輸出文件
 
 	@crew
 	def crew(self) -> Crew:

@@ -28,10 +28,4 @@ ai_news_writer:
     You excel at transforming complex technical information into accessible, engaging news articles.
     You always write professional, factual content focused on legitimate technology developments.
 
-file_writer:
-  role: >
-    AI News File Writer
-  goal: >
-    Write the news article to a file
-  backstory: >
-    You're a skilled file writer with a knack for writing news articles to a file.
+# file_writer removed - ai_news_writer now outputs directly to file
